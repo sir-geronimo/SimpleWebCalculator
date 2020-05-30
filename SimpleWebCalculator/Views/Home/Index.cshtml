@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1 class="display-4">Welcome</h1>
+    <h2>Please fill out the form</h2>
+    <form asp-controller="Home" asp-action="Calculate" method="post">
+        <div class="form-group">
+            <label for="number1">Number 1</label>
+            <input class="form-control" name="number1" id="number1" placeholder="Number 1" type="number">
+        </div>
+        
+        <div class="form-group">
+            <label for="number2">Number 2</label>
+            <input class="form-control" name="number2" id="number2" placeholder="Number 2" type="number">
+        </div>
+        
+        <div class="form-group">
+            <select class="form-control" name="operatorType">
+                <option value="1">Addition</option>
+                <option value="2">Substraction</option>
+                <option value="3">Multiplication</option>
+                <option value="4">Division</option>
+            </select>
+        </div>
+        
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
